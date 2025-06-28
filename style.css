@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(25, 27, 33);
+}
 .result{
     display: flex;
     flex-wrap: wrap;
@@ -5,4 +8,48 @@
     align-items: center;
     height: auto;
     width: 100%;
+}
+img{
+    height: 300px;
+    width: 450px;
+}
+.heading{
+    text-align: center;
+    font-family: "Playwrite HU", cursive;
+    color: white;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  background: radial-gradient(circle closest-side,#000 94%,#0000) right/calc(200% - 1em) 100%;
+  animation: l24 1s infinite alternate linear;
+  margin-left: 45%;
+  display: none;
+}
+.loader::before {
+  content: "Loading...";
+  line-height: 1em;
+  color: #0000;
+  background: inherit;
+  background-image: radial-gradient(circle closest-side,#fff 94%,#000);
+  -webkit-background-clip:text;
+          background-clip:text;
+    
+}
+
+@keyframes l24{
+  100%{background-position: left}
+}
+
+@media screen and (max-width : 768px) {
+    img{
+        width: 350px;
+        height: 350px;
+    }
+    .loader{
+        margin-left: 38%;
+    }
 }
